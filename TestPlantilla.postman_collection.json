@@ -1,0 +1,134 @@
+{
+	"info": {
+		"_postman_id": "8107aefc-d17e-46c2-8bc0-54238d9531f2",
+		"name": "TestPlantilla",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Guardar Persona",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"22\",\r\n    \"nombres\": \"nombre prueba\",\r\n    \"apellidos\": \"apellido prueba\",\r\n    \"email\": \"email@prueba.com\",\r\n    \"edad\": 30\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/guardarPersona",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"guardarPersona"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Personas",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/listarPersonas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"listarPersonas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mostrar Persona",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/mostrarPersona/22",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"mostrarPersona",
+						"22"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar Persona",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/eliminarPersona/22",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"eliminarPersona",
+						"22"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar Persona",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"22\",\r\n    \"nombres\": \"nombre prueba actualizado\",\r\n    \"apellidos\": \"apellido prueba actualizado\",\r\n    \"email\": \"email@prueba.com\",\r\n    \"edad\": 30\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/actualizarPersona",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"actualizarPersona"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
