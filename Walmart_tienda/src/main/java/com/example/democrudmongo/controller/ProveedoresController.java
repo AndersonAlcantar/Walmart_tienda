@@ -33,6 +33,8 @@ public class ProveedoresController {
 		return proveedorService.listarProveedores();
 	}
 	
+	//danna
+	
 	@RequestMapping(value = "/mostrarProveedor/{id}", method = RequestMethod.POST)
 	public @ResponseBody Proveedores mostrarProveedor(@PathVariable("id") String id){
 		return proveedorService.mostrarProveedores(id);
