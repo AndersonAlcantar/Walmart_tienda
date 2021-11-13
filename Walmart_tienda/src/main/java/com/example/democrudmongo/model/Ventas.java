@@ -6,62 +6,58 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document(collection = "ventas")
 public class Ventas {
 	@Id
-	private String codigo_venta;
-	private String cedula_cliente;
-	private String cedula_usuario;
-	private Double valor_total_venta;
-	private Double valor_iva;
-	private Double valor_total_mas_iva;
-	
-	
-	public String getCodigo_venta() {
-		return codigo_venta;
+	private Long codigo;
+	private String cedulaCliente;
+	private String cedulaUsuario;
+	private Double valorTotalVenta;
+	private Double valorIva;
+	private Double valorTotalMasIva;
+	public Long getCodigo() {
+		return codigo;
 	}
-	public void setCodigo_venta(String codigo_venta) {
-		this.codigo_venta = codigo_venta;
+	public void setCodigo(Long codigo) {
+		this.codigo = codigo;
 	}
-	public String getCedula_cliente() {
-		return cedula_cliente;
+	public String getCedulaCliente() {
+		return cedulaCliente;
 	}
-	public void setCedula_cliente(String cedula_cliente) {
-		this.cedula_cliente = cedula_cliente;
+	public void setCedulaCliente(String cedulaCliente) {
+		this.cedulaCliente = cedulaCliente;
 	}
-	public String getCedula_usuario() {
-		return cedula_usuario;
+	public String getCedulaUsuario() {
+		return cedulaUsuario;
 	}
-	public void setCedula_usuario(String cedula_usuario) {
-		this.cedula_usuario = cedula_usuario;
+	public void setCedulaUsuario(String cedulaUsuario) {
+		this.cedulaUsuario = cedulaUsuario;
 	}
-	public Double getValor_total_venta() {
-		return valor_total_venta;
+	public Double getValorTotalVenta() {
+		return valorTotalVenta;
 	}
-	public void setValor_total_venta(Double valor_total_venta) {
-		this.valor_total_venta = valor_total_venta;
+	public void setValorTotalVenta(Double valorTotalVenta) {
+		this.valorTotalVenta = valorTotalVenta;
 	}
-	public Double getValor_iva() {
-		return valor_iva;
+	public Double getValorIva() {
+		return valorIva;
 	}
-	public void setValor_iva(Double valor_iva) {
-		this.valor_iva = valor_iva;
+	public void setValorIva(Double valorIva) {
+		this.valorIva = valorIva;
 	}
-	public Double getValor_total_mas_iva() {
-		return valor_total_mas_iva;
+	public Double getValorTotalMasIva() {
+		return valorTotalMasIva;
 	}
-	public void setValor_total_mas_iva(Double valor_total_mas_iva) {
-		this.valor_total_mas_iva = valor_total_mas_iva;
+	public void setValorTotalMasIva(Double valorTotalMasIva) {
+		this.valorTotalMasIva = valorTotalMasIva;
 	}
-	public Ventas(String codigo_venta, String cedula_cliente, String cedula_usuario, Double valor_total_venta,
-			Double valor_iva, Double valor_total_mas_iva) {
+	public Ventas(Long codigo, String cedulaCliente, String cedulaUsuario, Double valorTotalVenta, Double valorIva,
+			Double valorTotalMasIva) {
 		super();
-		this.codigo_venta = codigo_venta;
-		this.cedula_cliente = cedula_cliente;
-		this.cedula_usuario = cedula_usuario;
-		this.valor_total_venta = valor_total_venta;
-		this.valor_iva = valor_iva;
-		this.valor_total_mas_iva = valor_total_mas_iva;
+		this.codigo = codigo;
+		this.cedulaCliente = cedulaCliente;
+		this.cedulaUsuario = cedulaUsuario;
+		this.valorTotalVenta = valorTotalVenta;
+		this.valorIva = valorIva;
+		this.valorTotalMasIva = valorTotalMasIva;
 	}
-	
-	
 	
 }
 

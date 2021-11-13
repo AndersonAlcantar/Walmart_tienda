@@ -18,6 +18,8 @@ public class Usuarios {
 	private String clave;
 	
 	
+	
+	
 	public String getId() {
 		return id;
 	}

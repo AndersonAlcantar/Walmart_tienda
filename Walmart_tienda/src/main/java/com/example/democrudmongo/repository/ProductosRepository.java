@@ -7,6 +7,8 @@ import com.example.democrudmongo.model.Productos;
 
 
 @Repository
-public interface ProductosRepository extends MongoRepository <Productos, Integer>{
+public interface ProductosRepository extends MongoRepository <Productos, Long>{
 	
+	Productos findByCodigoProducto(Long codigoPorducto);
+	void deleteByCodigoProducto(Long codigoPorducto);
 }
