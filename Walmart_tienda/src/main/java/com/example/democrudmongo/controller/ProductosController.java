@@ -35,13 +35,13 @@ public class ProductosController {
 	}
 	
 	@RequestMapping(value = "/mostrarProductos/{id}", method = RequestMethod.POST)
-	public @ResponseBody Productos mostrarProductos(@PathVariable("id") Integer id){
-		return productosService.mostrarProductos(id);
+	public @ResponseBody Productos mostrarProductos(@PathVariable("codigoProducto") Long codigoProducto){
+		return productosService.mostrarProductos(codigoProducto);
 	}
 	
 	@RequestMapping(value = "eliminarProductos/{id}", method = RequestMethod.DELETE)
-	public @ResponseBody void eliminarProductos(@PathVariable("id") Integer id){
-		productosService.eliminarProductos(id);
+	public @ResponseBody void eliminarProductos(@PathVariable("codigoProducto") Long codigoProducto){
+		productosService.eliminarProductos(codigoProducto);
 	}
 	
 	@RequestMapping(value = "/actualizarProductos", method = RequestMethod.PUT)

@@ -24,12 +24,12 @@ public class ProductosService {
 		return productosRepository.findAll();
 	}
 	
-	public Productos mostrarProductos(int id) {
-		return productosRepository.findById(id).orElse(null);
+	public Productos mostrarProductos(Long codigoProducto) {
+		return productosRepository.findByCodigoProducto(codigoProducto);
 	}
 	
-	public void eliminarProductos(int id) {
-		productosRepository.deleteById(id);
+	public void eliminarProductos(Long codigoProducto) {
+		productosRepository.deleteByCodigoProducto(codigoProducto);
 	}
 	
 	public void actualizarProductos(Productos productos) {

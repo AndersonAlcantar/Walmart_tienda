@@ -8,7 +8,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Productos {
 
 	
-	private int id;
+	private Long codigoProducto;
 	private String nombre_producto;
 	private int nit_proveedor;
 	private double precio_compra;
@@ -16,11 +16,11 @@ public class Productos {
 	private double precio_venta;
 	
 	
-	public int getId() {
-		return id;
+	public Long getCodigoProducto() {
+		return codigoProducto;
 	}
-	public void setId(int id) {
-		this.id = id;
+	public void setCodigoProducto(Long codigoProducto) {
+		this.codigoProducto = codigoProducto;
 	}
 	public String getNombre_producto() {
 		return nombre_producto;
@@ -52,16 +52,18 @@ public class Productos {
 	public void setPrecio_venta(double precio_venta) {
 		this.precio_venta = precio_venta;
 	}
-	public Productos(int id, String nombre_producto, int nit_proveedor, double precio_compra, double iva_compra,
-			double precio_venta) {
+	public Productos(Long codigoProducto, String nombre_producto, int nit_proveedor, double precio_compra,
+			double iva_compra, double precio_venta) {
 		super();
-		this.id = id;
+		this.codigoProducto = codigoProducto;
 		this.nombre_producto = nombre_producto;
 		this.nit_proveedor = nit_proveedor;
 		this.precio_compra = precio_compra;
 		this.iva_compra = iva_compra;
 		this.precio_venta = precio_venta;
 	}
+
+	
 	
 	
 	
