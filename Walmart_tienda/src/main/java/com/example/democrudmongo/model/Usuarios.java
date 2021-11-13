@@ -4,7 +4,6 @@ package com.example.democrudmongo.model;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-//Prueba
 
 @Document(collection = "usuarios")
 public class Usuarios {
@@ -56,6 +55,7 @@ public class Usuarios {
 	public void setClave(String clave) {
 		this.clave = clave;
 	}
+	
 	public Usuarios(String id, String nombres, String apellidos, String email, String cargo, String clave) {
 		super();
 		this.id = id;
