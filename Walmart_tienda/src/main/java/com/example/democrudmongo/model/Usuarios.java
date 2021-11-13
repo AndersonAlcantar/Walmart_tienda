@@ -4,7 +4,7 @@ package com.example.democrudmongo.model;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-
+//Prueba
 
 @Document(collection = "usuarios")
 public class Usuarios {
