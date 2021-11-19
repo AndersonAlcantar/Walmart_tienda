@@ -12,6 +12,8 @@ public class Ventas {
 	private Double valorTotalVenta;
 	private Double valorIva;
 	private Double valorTotalMasIva;
+	
+	
 	public Long getCodigo() {
 		return codigo;
 	}
