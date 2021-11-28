@@ -3,6 +3,7 @@ package com.example.democrudmongo.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,6 +17,8 @@ import com.example.democrudmongo.service.ClientesService;
 
 @RestController
 @RequestMapping(path = "/api/v1")
+//crossOrigin= es el origen de los metodos
+@CrossOrigin(origins = "*", methods = {RequestMethod.POST, RequestMethod.GET, RequestMethod.PUT, RequestMethod.DELETE})
 public class ClientesController {
 	
 	@Autowired
@@ -24,6 +27,7 @@ public class ClientesController {
 	@RequestMapping(value = "/guardarCliente", method = RequestMethod.POST)
 	public @ResponseBody void guardarPersona(@RequestBody Clientes persona_cliente) {
 		personaService.guardarPersona(persona_cliente);
+		
 	}
 	
 	@RequestMapping(value = "/listarCliente", method = RequestMethod.POST)
