@@ -14,26 +14,26 @@ import com.example.democrudmongo.repository.UsuariosRepository;
 public class UsuariosService {
 	
 	@Autowired
-	private UsuariosRepository personaRepository;
+	private UsuariosRepository UsuarioRepository;
 	
 	
-	public void guardarPersona(Usuarios persona_usuario) {
-		personaRepository.save(persona_usuario);
+	public void guardarUsuario(Usuarios usuario) {
+		UsuarioRepository.save(usuario);
 	}
 	
-	public List<Usuarios> listarPersonas(){
-		return personaRepository.findAll();
+	public List<Usuarios> listarUsuario(){
+		return UsuarioRepository.findAll();
 	}
 	
-	public Usuarios mostrarPersona(String id) {
-		return personaRepository.findById(id).orElse(null);
+	public Usuarios mostrarUsuario(String id) {
+		return UsuarioRepository.findById(id).orElse(null);
 	}
 	
-	public void eliminarPersona(String id) {
-		personaRepository.deleteById(id);
+	public void eliminarUsuario(String id) {
+		UsuarioRepository.deleteById(id);
 	}
 	
-	public void actualizarPersona(Usuarios persona_usuario) {
-		personaRepository.save(persona_usuario);
+	public void actualizarUsuario(Usuarios usuario) {
+		UsuarioRepository.save(usuario);
 	}
 }
