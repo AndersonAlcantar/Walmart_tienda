@@ -36,8 +36,5 @@ public class DemoCrudMongoApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(DemoCrudMongoApplication.class, args);
 	}
-
-	
-
 	
 }

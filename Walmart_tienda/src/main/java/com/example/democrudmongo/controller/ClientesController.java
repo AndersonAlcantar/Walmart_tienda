@@ -16,37 +16,38 @@ import com.example.democrudmongo.service.ClientesService;
 
 
 @RestController
-@RequestMapping(path = "/api/v1")
 //crossOrigin= es el origen de los metodos
 @CrossOrigin(origins = "*", methods = {RequestMethod.POST, RequestMethod.GET, RequestMethod.PUT, RequestMethod.DELETE})
+@RequestMapping(path = "/api/v1")
+
 public class ClientesController {
 	
 	@Autowired
-	private ClientesService personaService;
+	private ClientesService clienteService;
 	
 	@RequestMapping(value = "/guardarCliente", method = RequestMethod.POST)
-	public @ResponseBody void guardarPersona(@RequestBody Clientes persona_cliente) {
-		personaService.guardarPersona(persona_cliente);
+	public @ResponseBody void guardarCliente(@RequestBody Clientes cliente) {
+		clienteService.guardarCliente(cliente);
 		
 	}
 	
-	@RequestMapping(value = "/listarCliente", method = RequestMethod.POST)
-	public @ResponseBody List<Clientes> listarPersonas(){
-		return personaService.listarPersonas();
+	@RequestMapping(value = "/listarCliente", method = RequestMethod.GET)
+	public @ResponseBody List<Clientes> listarCliente(){
+		return clienteService.listarCliente();
 	}
 	
-	@RequestMapping(value = "/mostrarCliente/{id}", method = RequestMethod.POST)
-	public @ResponseBody Clientes mostrarPersona(@PathVariable("id") String id){
-		return personaService.mostrarPersona(id);
+	@RequestMapping(value = "/mostrarCliente/{id}", method = RequestMethod.GET)
+	public @ResponseBody Clientes mostrarCliente(@PathVariable("id") String id){
+		return clienteService.mostrarCliente(id);
 	}
 	
 	@RequestMapping(value = "eliminarCliente/{id}", method = RequestMethod.DELETE)
-	public @ResponseBody void eliminarPersona(@PathVariable("id") String id){
-		personaService.eliminarPersona(id);
+	public @ResponseBody void eliminarCliente(@PathVariable("id") String id){
+		clienteService.eliminarCliente(id);
 	}
 	
 	@RequestMapping(value = "/actualizarCliente", method = RequestMethod.PUT)
-	public @ResponseBody void Usuario(@RequestBody Clientes persona_cliente) {
-		personaService.actualizarPersona(persona_cliente);
+	public @ResponseBody void actualizarCliente(@RequestBody Clientes cliente) {
+		clienteService.actualizarCliente(cliente);
 	}
 }

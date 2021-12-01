@@ -17,23 +17,23 @@ public class ClientesService {
 	private ClientesRepository clientesRepository;
 	
 	
-	public void guardarPersona(Clientes persona_cliente) {
-		clientesRepository.save(persona_cliente);
+	public void guardarCliente(Clientes cliente) {
+		clientesRepository.save(cliente);
 	}
 	
-	public List<Clientes> listarPersonas(){
+	public List<Clientes> listarCliente(){
 		return clientesRepository.findAll();
 	}
 	
-	public Clientes mostrarPersona(String id) {
+	public Clientes mostrarCliente(String id) {
 		return clientesRepository.findById(id).orElse(null);
 	}
 	
-	public void eliminarPersona(String id) {
+	public void eliminarCliente(String id) {
 		clientesRepository.deleteById(id);
 	}
 	
-	public void actualizarPersona(Clientes persona_cliente) {
-		clientesRepository.save(persona_cliente);
+	public void actualizarCliente(Clientes cliente) {
+		clientesRepository.save(cliente);
 	}
 }
