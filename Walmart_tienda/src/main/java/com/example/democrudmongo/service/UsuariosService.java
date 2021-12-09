@@ -25,12 +25,12 @@ public class UsuariosService {
 		return UsuarioRepository.findAll();
 	}
 	
-	public Usuarios mostrarUsuario(String id) {
-		return UsuarioRepository.findById(id).orElse(null);
+	public Usuarios mostrarUsuario(String idUsuario) {
+		return UsuarioRepository.findById(idUsuario).orElse(null);
 	}
 	
-	public void eliminarUsuario(String id) {
-		UsuarioRepository.deleteById(id);
+	public void eliminarUsuario(String idUsuario) {
+		UsuarioRepository.deleteById(idUsuario);
 	}
 	
 	public void actualizarUsuario(Usuarios usuario) {

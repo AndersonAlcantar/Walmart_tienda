@@ -33,14 +33,14 @@ public class UsuariosController {
 		return personaService.listarUsuario();
 	}
 	
-	@RequestMapping(value = "/mostrarUsuario/{id}", method = RequestMethod.GET)
-	public @ResponseBody Usuarios mostrarPersona(@PathVariable("id") String id){
-		return personaService.mostrarUsuario(id);
+	@RequestMapping(value = "/mostrarUsuario/{idUsuario}", method = RequestMethod.GET)
+	public @ResponseBody Usuarios mostrarPersona(@PathVariable("idUsuario") String idUsuario){
+		return personaService.mostrarUsuario(idUsuario);
 	}
 	
-	@RequestMapping(value = "eliminarUsuario/{id}", method = RequestMethod.DELETE)
-	public @ResponseBody void eliminarPersona(@PathVariable("id") String id){
-		personaService.eliminarUsuario(id);
+	@RequestMapping(value = "eliminarUsuario/{idUsuario}", method = RequestMethod.DELETE)
+	public @ResponseBody void eliminarPersona(@PathVariable("idUsuario") String idUsuario){
+		personaService.eliminarUsuario(idUsuario);
 	}
 	
 	@RequestMapping(value = "/actualizarUsuario", method = RequestMethod.PUT)
