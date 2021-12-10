@@ -29,12 +29,12 @@ public class ProductosController {
 		productosService.guardarProductos(productos);
 	}
 	
-	@RequestMapping(value = "/listarProductos", method = RequestMethod.POST)
+	@RequestMapping(value = "/listarProductos", method = RequestMethod.GET)
 	public @ResponseBody List<Productos> listarProductos(){
 		return productosService.listarProductos();
 	}
 	
-	@RequestMapping(value = "/mostrarProductos/{id}", method = RequestMethod.POST)
+	@RequestMapping(value = "/mostrarProductos/{id}", method = RequestMethod.GET)
 	public @ResponseBody Productos mostrarProductos(@PathVariable("codigoProducto") Long codigoProducto){
 		return productosService.mostrarProductos(codigoProducto);
 	}
