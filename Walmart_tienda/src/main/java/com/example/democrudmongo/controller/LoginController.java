@@ -23,8 +23,7 @@ public class LoginController {
 	@PostMapping(path = "/login")
 	public @ResponseBody String autenticarUsuario(@RequestBody Usuarios usuarioNuevo) {
 	
-		Usuarios usuarioAutenticado = loginservice.autenticarUsuarioServicio(usuarioNuevo.getNombres(), usuarioNuevo.getClave());
-
+		Usuarios usuarioAutenticado = loginservice.autenticarUsuarioServicio(usuarioNuevo.getNombresUsuario(), usuarioNuevo.getClaveUsuario());
 		String respuesta = null;
 		if(usuarioAutenticado != null) {
 			respuesta = "EXITOSO";

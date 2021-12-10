@@ -9,5 +9,5 @@ import com.example.democrudmongo.model.Usuarios;
 @Repository
 public interface UsuariosRepository extends MongoRepository<Usuarios, String>{
 	
-	Usuarios findByid(String id_usuario);
+	Usuarios findByIdUsuario(String idUsuario);
 }
