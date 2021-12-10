@@ -1,13 +1,14 @@
 package com.example.democrudmongo.model;
 
 
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 
 @Document(collection="productos")
 public class Productos {
 
-	
+	@Id
 	private Long codigoProducto;
 	private String nombre_producto;
 	private int nit_proveedor;
