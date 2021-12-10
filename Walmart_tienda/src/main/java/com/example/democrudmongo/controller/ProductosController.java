@@ -5,6 +5,7 @@ package com.example.democrudmongo.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,6 +19,7 @@ import com.example.democrudmongo.service.ProductosService;
 	
 
 @RestController
+@CrossOrigin(origins = "*", methods = {RequestMethod.POST, RequestMethod.GET, RequestMethod.PUT, RequestMethod.DELETE})
 @RequestMapping(path = "/api/v1")
 public class ProductosController {
 
@@ -29,12 +31,12 @@ public class ProductosController {
 		productosService.guardarProductos(productos);
 	}
 	
-	@RequestMapping(value = "/listarProductos", method = RequestMethod.POST)
+	@RequestMapping(value = "/listarProductos", method = RequestMethod.GET)
 	public @ResponseBody List<Productos> listarProductos(){
 		return productosService.listarProductos();
 	}
 	
-	@RequestMapping(value = "/mostrarProductos/{id}", method = RequestMethod.POST)
+	@RequestMapping(value = "/mostrarProductos/{id}", method = RequestMethod.GET)
 	public @ResponseBody Productos mostrarProductos(@PathVariable("codigoProducto") Long codigoProducto){
 		return productosService.mostrarProductos(codigoProducto);
 	}
