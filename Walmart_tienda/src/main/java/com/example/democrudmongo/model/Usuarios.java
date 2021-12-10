@@ -15,6 +15,7 @@ public class Usuarios {
 	private String emailUsuario;
 	private String cargoUsuario;
 	private String claveUsuario;
+	private String sedeUsuario;
 	
 	
 	public String getIdUsuario() {
@@ -53,10 +54,16 @@ public class Usuarios {
 	public void setClaveUsuario(String claveUsuario) {
 		this.claveUsuario = claveUsuario;
 	}
+	public String getSedeUsuario() {
+		return sedeUsuario;
+	}
+	public void setSedeUsuario(String sedeUsuario) {
+		this.sedeUsuario = sedeUsuario;
+	}
 	
 	
 	public Usuarios(String idUsuario, String nombresUsuario, String apellidosUsuario, String emailUsuario,
-			String cargoUsuario, String claveUsuario) {
+			String cargoUsuario, String claveUsuario, String sedeUsuario) {
 		super();
 		this.idUsuario = idUsuario;
 		this.nombresUsuario = nombresUsuario;
@@ -64,6 +71,7 @@ public class Usuarios {
 		this.emailUsuario = emailUsuario;
 		this.cargoUsuario = cargoUsuario;
 		this.claveUsuario = claveUsuario;
+		this.sedeUsuario = sedeUsuario;
 	}
 		
 }
