@@ -5,65 +5,65 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 
-
 @Document(collection = "usuarios")
 public class Usuarios {
 	
 	@Id
-	private String id;						
-	private String nombres;
-	private String apellidos;
-	private String email;
-	private String cargo;
-	private String clave;
+	private String idUsuario;						
+	private String nombresUsuario;
+	private String apellidosUsuario;
+	private String emailUsuario;
+	private String cargoUsuario;
+	private String claveUsuario;
 	
 	
+	public String getIdUsuario() {
+		return idUsuario;
+	}
+	public void setIdUsuario(String idUsuario) {
+		this.idUsuario = idUsuario;
+	}
+	public String getNombresUsuario() {
+		return nombresUsuario;
+	}
+	public void setNombresUsuario(String nombresUsuario) {
+		this.nombresUsuario = nombresUsuario;
+	}
+	public String getApellidosUsuario() {
+		return apellidosUsuario;
+	}
+	public void setApellidosUsuario(String apellidosUsuario) {
+		this.apellidosUsuario = apellidosUsuario;
+	}
+	public String getEmailUsuario() {
+		return emailUsuario;
+	}
+	public void setEmailUsuario(String emailUsuario) {
+		this.emailUsuario = emailUsuario;
+	}
+	public String getCargoUsuario() {
+		return cargoUsuario;
+	}
+	public void setCargoUsuario(String cargoUsuario) {
+		this.cargoUsuario = cargoUsuario;
+	}
+	public String getClaveUsuario() {
+		return claveUsuario;
+	}
+	public void setClaveUsuario(String claveUsuario) {
+		this.claveUsuario = claveUsuario;
+	}
 	
 	
-	public String getId() {
-		return id;
-	}
-	public void setId(String id) {
-		this.id = id;
-	}
-	public String getNombres() {
-		return nombres;
-	}
-	public void setNombres(String nombres) {
-		this.nombres = nombres;
-	}
-	public String getApellidos() {
-		return apellidos;
-	}
-	public void setApellidos(String apellidos) {
-		this.apellidos = apellidos;
-	}
-	public String getEmail() {
-		return email;
-	}
-	public void setEmail(String email) {
-		this.email = email;
-	}
-	public String getCargo() {
-		return cargo;
-	}
-	public void setCargo(String cargo) {
-		this.cargo = cargo;
-	}
-	public String getClave() {
-		return clave;
-	}
-	public void setClave(String clave) {
-		this.clave = clave;
-	}
-	public Usuarios(String id, String nombres, String apellidos, String email, String cargo, String clave) {
+	public Usuarios(String idUsuario, String nombresUsuario, String apellidosUsuario, String emailUsuario,
+			String cargoUsuario, String claveUsuario) {
 		super();
-		this.id = id;
-		this.nombres = nombres;
-		this.apellidos = apellidos;
-		this.email = email;
-		this.cargo = cargo;
-		this.clave = clave;
+		this.idUsuario = idUsuario;
+		this.nombresUsuario = nombresUsuario;
+		this.apellidosUsuario = apellidosUsuario;
+		this.emailUsuario = emailUsuario;
+		this.cargoUsuario = cargoUsuario;
+		this.claveUsuario = claveUsuario;
 	}
-	
+		
 }

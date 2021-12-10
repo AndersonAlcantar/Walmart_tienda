@@ -15,8 +15,8 @@ public class LoginService {
 	private LoginRepository loginRepository;
 	
 	
-	public Usuarios autenticarUsuarioServicio(String nombres, String clave) {
-		Usuarios usuarioBuscado = loginRepository.findByNombresAndClave(nombres, clave);
+	public Usuarios autenticarUsuarioServicio(String nombresUsuario, String claveUsuario) {
+		Usuarios usuarioBuscado = loginRepository.findByNombresUsuarioAndClaveUsuario(nombresUsuario, claveUsuario);
 		return usuarioBuscado;
 	}
 }

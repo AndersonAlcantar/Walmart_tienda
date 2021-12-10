@@ -12,5 +12,5 @@ import com.example.democrudmongo.model.Usuarios;
 @Repository
 public interface LoginRepository extends MongoRepository<Usuarios, String>{
 	
-	Usuarios findByNombresAndClave(String nombres, String clave);
+	Usuarios findByNombresUsuarioAndClaveUsuario(String nombresUsuario, String claveUsuario);
 }
