@@ -1,6 +1,4 @@
 package com.example.democrudmongo.controller;
-
-
 	
 import java.util.List;
 
@@ -15,8 +13,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.democrudmongo.model.Productos;
 import com.example.democrudmongo.service.ProductosService;
-
-	
 
 @RestController
 @CrossOrigin(origins = "*", methods = {RequestMethod.POST, RequestMethod.GET, RequestMethod.PUT, RequestMethod.DELETE})
@@ -36,12 +32,12 @@ public class ProductosController {
 		return productosService.listarProductos();
 	}
 	
-	@RequestMapping(value = "/mostrarProductos/{id}", method = RequestMethod.GET)
+	@RequestMapping(value = "/mostrarProductos/{codigoProducto}", method = RequestMethod.GET)
 	public @ResponseBody Productos mostrarProductos(@PathVariable("codigoProducto") Long codigoProducto){
 		return productosService.mostrarProductos(codigoProducto);
 	}
 	
-	@RequestMapping(value = "eliminarProductos/{id}", method = RequestMethod.DELETE)
+	@RequestMapping(value = "eliminarProductos/{codigoProducto}", method = RequestMethod.DELETE)
 	public @ResponseBody void eliminarProductos(@PathVariable("codigoProducto") Long codigoProducto){
 		productosService.eliminarProductos(codigoProducto);
 	}

@@ -10,9 +10,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.democrudmongo.model.Usuarios;
 import com.example.democrudmongo.service.LoginService;
 
-
-
-
 @RestController
 @RequestMapping(path = "/api/v1")
 public class LoginController {
